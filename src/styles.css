@@ -1,0 +1,108 @@
+
+@import "./theme.css"; 
+
+ *, *::after, *::before{
+    box-sizing: border-box;
+  }
+  
+  .App{
+      margin: 0;
+      font-family: Lato,"Helvetica Neue",Arial,Helvetica,sans-serif;
+      height: auto;
+       background-color:var(--main-background); 
+
+    }
+
+  
+  a{
+    text-decoration: none;
+    font-size: var(--font-text);
+    }
+  
+    
+  a:hover{
+    color:var(--hovered_link);
+    
+    }
+  /*  ----------    public style  for pages ---------------- */
+  
+    .container{
+      width: 100%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   
+    }
+    .details1{
+     max-width: 1120px;
+    }
+    
+    .details2{
+      max-width: 1024px;;
+    }
+  /* -------------------------------------- */
+  /*                   button               */
+  /* -------------------------------------- */
+  
+  
+  .button{
+    padding: 11px 26px;
+    border-radius: 34px;
+    color: var(--background_light_main);
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: rgb(0 0 0 / 40%) 0px 2px 15px -3px;
+  }
+  
+  .button-primary{
+     background-color: var(--button_light_primary); 
+    color:var(--nav-background);
+  }
+  .button-primary:hover{
+    transform: translatey(-2px);
+    scale: .03s;
+    box-shadow: rgb(0 0 0 / 40%) 0px 2px 15px -3px;
+    /* transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1); */
+    color:var(--nav-background);
+  }
+  /* ---------------------------------------- */
+  .links{
+    display: inline-block;
+  }
+  .links a{
+    padding: 13px 16px 13px 8px;
+    color:var(--text-color-light);
+  }
+  .links a:hover{
+   background-color: var(--back-shadow);
+  }
+  .icon{
+    width: 18px;
+    height: 18px;
+  }
+  .chart-icon{
+    width:32px;
+    height: 32px;
+  }
+  .logo-name{
+    width: 100%px;
+    height: 100%px;
+    margin: 0px;
+    display: flex;
+    justify-content: flex-start;
+    text-decoration:underline
+  }
+  
+  .logo-name p{
+    margin:2px;
+    color: var(--shadow);
+    font-size: 12px;
+  }
+  .logo{
+    width:30px;
+    height:30px;
+    margin: 1px 6px 1px 0px;
+  }
+ 
