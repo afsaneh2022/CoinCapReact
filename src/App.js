@@ -8,6 +8,7 @@ import "./styles.css";
 
 function App() {
   return (
+    <div className="App">
    
 
         <BrowserRouter>
@@ -15,11 +16,12 @@ function App() {
                 <Route   path="/"  element={<HomePage /> }></Route>
                 <Route   path="/ExchangesPage"  element={<ExchangesP /> }></Route>
                 <Route   path="/SwapPage"  element={<SwapPage /> }></Route>
+                <Route path="/CoinDtls/:name" element={<CoinDtlsPage />} />
             </Routes>
 
         </BrowserRouter>
 
-       
+        </div>     
    
       
    

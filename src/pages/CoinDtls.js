@@ -1,23 +1,32 @@
 import { useEffect,useState } from "react";
 import Nav from "../components/Nav"
-import Header from "../components/Header"
+import HeaderCoin from "../components/HeaderCoin"
+import CoinDetails  from "../components/CoinDetails";
 import Footer from "../components/Footer"
-import {get_coin} from "../helpers/server"
+import {get_coin_chart,get_coin_dtl} from "../helpers/server"
 import ChartEx from "../components/ChartEx"
+import Header from "../components/HeaderCoin";
 
 
 function CoinDtls(){
-let [ data,setData]=useState([])
+let [ datachart,setDatachart]=useState([])
+let [ datadtl,setDatadtl]=useState([])
 useEffect(()=>{
-    get_coin().then((respons)=>{
-        setData(respons);
+    get_coin_chart().then((respons)=>{
+        setDatachart(respons);
     });
+    get_coin_dtl().then((respons1)=>{
+        setDatadtl(respons1);
+    });
+
+
 },[]);
 
     return <div > 
                 <Nav />
-                <Header />
-                <ChartEx  list={data}/>
+                < HeaderCoin list={datadtl} />
+                {/* < CoinDetails list={datadtl}/> 
+                <ChartEx  list={datachart}/> */}
                 <Footer />
             </div>
 

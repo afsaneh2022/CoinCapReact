@@ -1,33 +1,44 @@
 import styled from "styled-components";
 
 let MainBox=styled.div`
-        width: 50%;
-        background-color: var(--main-background);
+        width: 40%;
+        background-color: green;
         margin: auto;
-        margin-top: 48px;
-        height: 500px;
+        margin-top: 96px;
+        margin-bottom: 48px;
+        padding-top:24px;
+        height: 400px;
         border-radius: 24px;
 `;
- let SwapBox=styled.div`
-        
-        width: 80%;
-        height: 80%;
-        background-color: #ffffff;
-        margin:48px 32px;
-        border-radius: 48px;
-        color:var( --text-color-light);
-        padding: 0px;
- `;
+ 
 let SwapBoxRow=styled.div`
-        height: 20%;
+        width: 90%;
+        margin:auto;
+        height: 15%;
         text-align: center;
         display: flex;
         justify-content: space-between;
-        background-color: #ffffff;
-        
+        background-color: red;
         align-content: center;
+        padding-top: 0px;
+         & h2{
+                text-align: center;
+                margin-top: 0px;
+                padding: 0px 20px;
+         }
+         & span{
+             
+                text-align: center;
+                margin-top: 0px;
+                padding: 0px 20px;  
+                
+                & img{
+                        width:32px;
+                        height: 32px;
+                }
+         }
 
 `;
 
 
-export {MainBox,SwapBox,SwapBoxRow};
+export {MainBox,SwapBoxRow};

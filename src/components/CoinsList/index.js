@@ -1,7 +1,7 @@
 
 import {TableList,TableHead,TrowAligh2,Asending,Trow,TrowAligh} from "./styles";
 import {separate,separate_symbol} from "../../Utils";
-
+import {Link} from  "react-router-dom";
 
 
 function CoinsList(props){
@@ -34,13 +34,13 @@ return(
                         <Trow  className="links">
 
                                 <TrowAligh  href="#" > {item.rank}</TrowAligh >  
-                                <TrowAligh2 className="logo-name" href={`/coinsdetail.html?coin=${item.id}`} >
+                                <Link to={`../CoinDtls/${item.name}`} className="logo-name"  >
                                         <img  className="logo" src={`https://assets.coincap.io/assets/icons/${item.symbol.toLowerCase()}@2x.png`} />
                                         <span>
                                         {item.name}
                                         <p>{item.symbol}</p>     
                                         </span>
-                                </TrowAligh2>
+                                </Link>
                                 <TrowAligh  href="#">{separate(item.priceUsd)} </TrowAligh>
                                 <TrowAligh  href="#">{separate_symbol(item.marketCapUsd)} </TrowAligh>
                                 <TrowAligh  href="#">{separate_symbol(item.vwap24Hr)} </TrowAligh>
@@ -69,3 +69,5 @@ return(
 
 
 export default CoinsList;
+
+// {`../CoinDtls?coin=${item.id}`}

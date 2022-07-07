@@ -1,6 +1,6 @@
 import { useEffect,useState } from "react";
 import Nav from "../components/Nav"
-import Header from "../components/Header"
+
 import Swap from "../components/Swap"
 import Footer from "../components/Footer"
 import {get_coins} from "../helpers/server"
@@ -15,7 +15,6 @@ function SwapPage(){
     
         return <div > 
                     <Nav />
-                    <Header />
                     <Swap list={data}/> 
                     <Footer />
                 </div>
